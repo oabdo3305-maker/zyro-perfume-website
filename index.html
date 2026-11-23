@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<title>ZYRO PERFUME | Scent / Identity</title>
+
+<style>
+:root {
+--bg:#080808;
+--gold:#c9a45e;
+--gold2:#e4c783;
+--white:#f5f1e9;
+--muted:#bcb5a9;
+--panel:#121212;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--white);
+font-family:Tahoma,Arial,sans-serif;
+line-height:1.8;
+}
+
+a{text-decoration:none;color:inherit}
+
+.wrap{
+width:min(1120px,92%);
+margin:auto;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:5;
+background:#080808ed;
+border-bottom:1px solid #ffffff18;
+backdrop-filter:blur(10px);
+}
+
+nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:14px 0;
+gap:18px;
+}
+
+.brand{
+font-size:21px;
+letter-spacing:4px;
+color:var(--gold);
+font-weight:bold;
+direction:ltr;
+}
+
+.links{
+display:flex;
+gap:24px;
+font-size:14px;
+}
+
+.links a:hover{color:var(--gold)}
+
+.btn{
+display:inline-block;
+padding:10px 22px;
+background:var(--gold);
+color:#080808;
+font-weight:bold;
+border:1px solid var(--gold);
+transition:.2s;
+}
+
+.btn:hover{
+background:transparent;
+color:var(--gold);
+}
+
+.btn.alt{
+background:transparent;
+color:var(--gold);
+}
+
+.hero{
+min-height:590px;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:36px;
+padding:60px 0;
+}
+
+.eyebrow{
+color:var(--gold2);
+letter-spacing:5px;
+direction:ltr;
+font-size:12px;
+}
+
+h1{
+font-size:clamp(42px,6vw,74px);
+line-height:1.2;
+margin:15px 0;
+}
+
+h1 span{
+color:var(--gold);
+direction:ltr;
+display:inline-block;
+}
+
+.hero p,.section-head p,.muted{
+color:var(--muted);
+}
+
+.hero p{
+font-size:17px;
+max-width:520px;
+}
+
+.actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.logo{
+background:#000;
+border:1px solid #c9a45e66;
+padding:18px;
+box-shadow:0 20px 70px #000;
+}
+
+.logo img{
+display:block;
+width:100%;
+max-height:420px;
+object-fit:contain;
+}
+
+section{padding:68px 0}
+
+.section-head{
+text-align:center;
+margin-bottom:34px;
+}
+
+.section-head small{
+color:var(--gold);
+letter-spacing:4px;
+direction:ltr;
+display:block;
+}
+
+.section-head h2{
+font-size:34px;
+margin:6px 0;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.card{
+background:var(--panel);
+border:1px solid #ffffff1c;
+padding:24px;
+text-align:center;
+}
+
+.symbol{
+font-size:32px;
+color:var(--gold);
+}
+
+.card p{
+color:var(--muted);
+font-size:14px;
+}
+
+.product{
+padding:0;
+text-align:right;
+overflow:hidden;
+transition:.3s;
+}
+
+.product:hover{
+transform:translateY(-7px);
+border-color:var(--gold);
+}
+
+.product-art{
+height:260px;
+overflow:hidden;
+background:#17130d;
+}
+
+.product-art img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+transition:.4s;
+}
+
+.product:hover .product-art img{
+transform:scale(1.05);
+}
+
+.product-info{
+padding:22px;
+}
+
+.product-info h3{
+color:var(--gold2);
+font-size:21px;
+}
+
+.product-info p{
+color:var(--muted);
+font-size:14px;
+min-height:55px;
+}
+
+.price{
+color:var(--gold2);
+font-weight:bold;
+margin:10px 0 16px;
+font-size:17px;
+}
+
+.signature{
+border-top:1px solid #c9a45e55;
+border-bottom:1px solid #c9a45e55;
+background:linear-gradient(110deg,#17130d,#080808 70%);
+}
+
+.signature-inner{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center;
+}
+
+.signature h2{
+font-size:43px;
+}
+
+.signature h2 span{color:var(--gold)}
+
+.signature-image img{
+width:100%;
+max-height:430px;
+object-fit:contain;
+display:block;
+}
+
+.contact{text-align:center}
+
+.contact p{color:var(--muted)}
+
+footer{
+border-top:1px solid #ffffff1c;
+padding:22px 0;
+color:#aaa;
+font-size:13px;
+}
+
+.foot{
+display:flex;
+justify-content:space-between;
+gap:12px;
+flex-wrap:wrap;
+}
+
+@media(max-width:760px){
+
+.links{display:none}
+
+.hero,.signature-inner{
+grid-template-columns:1fr;
+}
+
+.hero{padding-top:35px}
+
+.logo{
+max-width:480px;
+margin:auto;
+}
+
+.grid{grid-template-columns:1fr}
+
+section{padding:52px 0}
+
+.product-art{height:300px}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="wrap">
+<nav>
+
+<a class="brand" href="#home">ZYRO PERFUME</a>
+
+<div class="links">
+<a href="#home">الرئيسية</a>
+<a href="#collections">العطور</a>
+<a href="#signature">خلطة ZYRO</a>
+<a href="#contact">تواصل معنا</a>
+</div>
+
+<a class="btn" href="https://wa.me/201016177257">اطلب الآن</a>
+
+</nav>
+</div>
+</header>
+
+<main>
+
+<div class="wrap hero" id="home">
+
+<div>
+<div class="eyebrow">SCENT / IDENTITY</div>
+
+<h1>
+مش مجرد عطر…<br>
+<span>دي هويتك.</span>
+</h1>
+
+<p>
+اختار رائحتك وسيب انطباعك يتكلم.
+اكتشف عالم ZYRO PERFUME، حيث الفخامة والتميز
+والروائح المصممة علشان كل لحظة يكون ليها حضورها الخاص.
+</p>
+
+<div class="actions">
+<a class="btn" href="#collections">اكتشف العطور</a>
+<a class="btn alt" href="https://wa.me/201016177257">تواصل واتساب</a>
+</div>
+
+</div>
+
+<div class="logo">
+<img src="././images/perfume1.jpg" alt="ZYRO PERFUME">
+</div>
+
+</div>
+
+<section>
+<div class="wrap">
+
+<div class="section-head">
+<small>THE ZYRO EXPERIENCE</small>
+<h2>اختار عطرك بطريقتك</h2>
+<p>رائحة تليق بشخصيتك، ولمسة تفضل في الذاكرة.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="symbol">✦</div>
+<h3>جودة وتميز</h3>
+<p>عطور مختارة بعناية لتناسب مختلف الأذواق.</p>
+</div>
+
+<div class="card">
+<div class="symbol">✧</div>
+<h3>روائح متنوعة</h3>
+<p>تشكيلة رجالي وحريمي وميكس تناسب كل شخصية.</p>
+</div>
+
+<div class="card">
+<div class="symbol">◇</div>
+<h3>هوية مختلفة</h3>
+<p>خليك مميز وسيب بصمتك مع ZYRO.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="collections">
+<div class="wrap">
+
+<div class="section-head">
+<small>OUR COLLECTION</small>
+<h2>اكتشف مجموعتنا</h2>
+<p>اختار عطرك المفضل من مجموعة ZYRO واطلبه مباشرة.</p>
+</div>
+
+<div class="grid">
+
+<!-- العطور الرجالي -->
+<div class="card product">
+
+<div class="product-art">
+<img src="./images/perfume2.jpg" alt="عطور ZYRO الرجالي">
+</div>
+
+<div class="product-info">
+
+<h3>عطور ZYRO الرجالي</h3>
+
+<p>
+مش مجرد عطر، دي بصمتك في كل مكان.
+روائح قوية وجذابة تجمع بين الأناقة والحضور المميز،
+علشان تسيب انطباع يفضل في الذاكرة.
+</p>
+
+<div class="price">تبدأ من 350 جنيه</div>
+
+<a class="btn" href="https://wa.me/201016177257?text=عايز%20أشوف%20العطور%20الرجالي">
+اطلب عبر واتساب
+</a>
+
+</div>
+</div>
+
+<!-- عطور الميكس -->
+<div class="card product">
+
+<div class="product-art">
+<img src="./images/perfume3.jpg" alt="عطور ZYRO Mix">
+</div>
+
+<div class="product-info">
+
+<h3>عطور ZYRO MIX</h3>
+
+<p>
+لأن التميز ملوش حدود.
+اختيارات متنوعة تجمع بين الأذواق المختلفة،
+وتناسب كل شخص بيدور على رائحة مختلفة ومميزة.
+</p>
+
+<div class="price">تبدأ من 350 جنيه</div>
+
+<a class="btn" href="https://wa.me/201016177257?text=عايز%20أشوف%20عطور%20الميكس">
+اطلب عبر واتساب
+</a>
+
+</div>
+</div>
+
+<!-- العطور الحريمي -->
+<div class="card product">
+
+<div class="product-art">
+<img src="./images/perfume4.jpg" alt="عطور ZYRO الحريمي">
+</div>
+
+<div class="product-info">
+
+<h3>عطور ZYRO الحريمي</h3>
+
+<p>
+أنوثة وأناقة في كل رشة.
+روائح راقية وناعمة وجذابة،
+تعبر عن شخصيتك وتخلي حضورك مختلف في كل مناسبة.
+</p>
+
+<div class="price">تبدأ من 250 جنيه</div>
+
+<a class="btn" href="https://wa.me/201016177257?text=عايزة%20أشوف%20العطور%20الحريمي">
+اطلبي عبر واتساب
+</a>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="signature" id="signature">
+
+<div class="wrap signature-inner">
+
+<div>
+
+<small class="eyebrow">THE SIGNATURE BLEND</small>
+
+<h2>قابل <span>ZYRO</span></h2>
+
+<p class="muted">
+خلطتنا الخاصة من ZYRO، مزيج مميز يجمع بين
+الانتعاش Fresh واللمسات الخشبية Woody.
+
+رائحة متوازنة وشخصية مستقلة وبصمة مختلفة
+مع كل استخدام.
+</p>
+
+<div class="price">الأسعار تبدأ من 300 جنيه</div>
+
+<a class="btn" href="https://wa.me/201016177257?text=عايز%20أطلب%20خلطة%20ZYRO%20الخاصة">
+اطلب خلطة ZYRO
+</a>
+
+</div>
+
+<div class="signature-image">
+<img src="./images/perfume5.jpg" alt="خلطة ZYRO الخاصة">
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<small>GET IN TOUCH</small>
+
+<h2>جاهز تختار عطرك؟</h2>
+
+<p>
+ابعتلنا على واتساب وهنساعدك تختار الرائحة المناسبة ليك.
+</p>
+
+</div>
+
+<a class="btn" href="https://wa.me/201016177257">
+اطلب الآن على واتساب
+</a>
+
+<p dir="ltr">01016177257</p>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="wrap foot">
+
+<span>© ZYRO PERFUME — SCENT / IDENTITY</span>
+
+<span>كل رائحة ليها هوية.</span>
+
+</div>
+
+</footer>
+
+</body>
+</html>
