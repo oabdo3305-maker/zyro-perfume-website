@@ -306,6 +306,46 @@ section{padding:52px 0}
 .product-art{height:300px}
 
 }
+/* ZYRO PRODUCT ANIMATIONS */
+
+.product {
+    opacity: 0;
+    transform: translateY(35px);
+    animation: zyroFadeUp 0.8s ease forwards;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.product:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.product:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+@keyframes zyroFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+}
+
+.product-art img {
+    transition: transform 0.5s ease;
+}
+
+.product:hover .product-art img {
+    transform: scale(1.08);
+}
 </style>
 </head>
 
